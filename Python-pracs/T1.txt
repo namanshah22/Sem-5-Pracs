@@ -1,0 +1,10 @@
+apple
+dog
+banana
+cat
+zebra
+orange
+elephant
+grape
+pineapple
+lion
