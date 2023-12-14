@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling JSON Data</title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+
+    <button onClick="loadData()">Load Data</button>
+    <p id="name"></p>
+    <p id="location"></p>
+    <p id="country"></p>
+    <script>
+        function loadData() {
+            fetch("./data.json")
+                .then((res) => {
+                    return res.json()
+                })
+                .then((data) => {
+                    console.log(data);
+                    let name = document.getElementById("name");
+                    let location = document.getElementById("location")
+                    let country = document.getElementById("country")
+                    name.innerHTML = data.name
+                    location.innerHTML = data.location
+                    country.innerHTML = data.country
+                }
+                )
+
+
+        }
+    </script>
+</body>
+
+</html>
